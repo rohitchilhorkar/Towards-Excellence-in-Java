@@ -16,7 +16,7 @@ public class InversionCount{
     public static int mergeArrays(int arr[], int low, int mid, int high){
         
         int temp[] = new int[high-low+1];
-        int i=0, inversionCount =0;
+        int i=0, inversionCount=0;
         int left = low;
         int right = mid+1;
 
@@ -38,15 +38,15 @@ public class InversionCount{
             return 0;
         else{
             int mid = (low + high) / 2;
-            inversionCount  += inversionCountMergeSortApproach(arr, low, mid);
-            inversionCount  += inversionCountMergeSortApproach(arr, mid+1, high);
-            inversionCount  += mergeArrays(arr, low, mid, high);
+            inversionCount += inversionCountMergeSortApproach(arr, low, mid);
+            inversionCount += inversionCountMergeSortApproach(arr, mid+1, high);
+            inversionCount += mergeArrays(arr, low, mid, high);
         }
         return inversionCount ;
     }
 
     public static void main(String[] args){
-        int arr[] = {2,4,1,2,6,3};
+        int arr[] = {5,4,3,1,2};
         int N = arr.length;
 
         int count = inversionCountBruteForceApproach(arr, N);
