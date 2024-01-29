@@ -1,3 +1,4 @@
+import java.util.*;
 public class RotateArray{
 
     public static void bruteForce(int[] arr, int rotateBy){
@@ -18,12 +19,10 @@ public class RotateArray{
         int N = arr.length;
 
         rotateBy =  rotateBy%N;
-
-        reverse(arr, 0, N-1);
-
-        reverse(arr, 0, rotateBy-1);
      
+        reverse(arr, 0, rotateBy-1);
         reverse(arr, rotateBy, N-1);
+        reverse(arr, 0, N-1);
 
         printArray(arr);
     }
@@ -42,10 +41,12 @@ public class RotateArray{
         }
     }
     public static void main(String[] args){
-        int[] arr = {1,2,3,4,5,6};
-        int rotateBy = 2;
+        int[] arr = {1,3,6,11,12,17};
+        int rotateBy = 4;
 
         // bruteForce(arr, rotateBy%arr.length);
+
+        // This reversal technique is bullshit
         reversalTechinque(arr, rotateBy);
     }
 }
