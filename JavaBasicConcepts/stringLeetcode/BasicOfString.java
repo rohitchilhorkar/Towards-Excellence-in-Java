@@ -10,7 +10,7 @@ public class BasicOfString{
             nameToReverse[i] = nameToReverse[j];
             nameToReverse[j] = letter;
         }
-            System.out.println(nameToReverse);
+        System.out.println(nameToReverse);
     }
 
     public static void main(String[] args){
@@ -18,8 +18,8 @@ public class BasicOfString{
         String name2 = new String("Rohit"); // if this is used only content is same
         // String name2 = "Rohit"; if this is used, pointing to same object
 
-        reverse(name);
-
+        // reverse(name);
+        System.out.println(name.equals("Rohit"));
         if(name == name2)   
             System.out.println("Equal Reference, i.e pointing to the same object");
         else if(name.equals(name2))
